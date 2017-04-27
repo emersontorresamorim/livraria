@@ -14,6 +14,7 @@ import br.com.caelum.livraria.modelo.Autor;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER) // defini explicitamente que as transações são controladas pelo Container EJB (CMT)
+//@Interceptors({LogInterceptor.class})
 public class AutorDao {
 
 	@PersistenceContext
