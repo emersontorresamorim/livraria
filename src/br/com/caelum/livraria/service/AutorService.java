@@ -16,6 +16,9 @@ public class AutorService {
 	
 	public void adiciona(Autor autor) {
 		dao.salva(autor);
+		
+		// simulação de uma falha de validação em uma regra de negócio
+		// throw new LivrariaException();
 	}
 
 	public List<Autor> todosAutores() {

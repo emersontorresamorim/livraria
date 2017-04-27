@@ -23,6 +23,9 @@ public class AutorDao {
 	//@TransactionAttribute(TransactionAttributeType.MANDATORY) // exige que já exista a transação, obrigando quem faz a chamada a garantir que a transação exista ou seja criada
 	public void salva(Autor autor) {
 		em.persist(autor);
+		
+		// simulação de erro em um serviço externo com um WS
+		// throw new RuntimeException("Erro em servico externo!");
 	}
 	
 	public List<Autor> todosAutores() {
